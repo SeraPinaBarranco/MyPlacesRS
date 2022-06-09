@@ -36,7 +36,7 @@ function success(pos) {
 
   let coor = document.getElementById('coor')
 
-  coor.innerHTML = crd.latitude
+  coor.innerHTML = crd.latitude + ', ' + crd.longitude
 };
 
 function error(err) {
