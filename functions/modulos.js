@@ -1,9 +1,9 @@
-export {app, db};
+//export {app, db};
 
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
-import { getFirestore, collection, addDoc  } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore.js"
+import { getFirestore, collection, addDoc, getDocs   } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore.js"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -25,13 +25,30 @@ let db = getFirestore(app)
 
 
 //* Añadir un documento a la  coleccion
-try {
-  const docRef = await addDoc(collection(db, "users"), {
+export const docRef =async ()=>{
+  await addDoc(collection(db, "users"), {
     first: "Ada",
     last: "Lovelace",
-    born: 1815
+    born: 1815 }) 
+} 
+
+  /*
+const addDocument = async function addDocument(){
+  try {
+    const docRef = await addDoc(collection(db, "users"), {
+      first: "Ada",
+      last: "Lovelace",
+      born: 1815
+    });
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+} */
+
+export const getDocuments= async ()=>{
+  const querySnapshot = await getDocs(collection(db, "users"));
+  querySnapshot.forEach((doc) => {
+    console.log(`${doc.id} => ${doc.data()}`);
   });
-  console.log("Document written with ID: ", docRef.id);
-} catch (e) {
-  console.error("Error adding document: ", e);
-}
+} 
