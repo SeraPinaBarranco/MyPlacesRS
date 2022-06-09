@@ -1,0 +1,66 @@
+/*
+    F683FF morado
+    FFFB91 amarillo
+    74FC8F verde
+*/
+*{
+    margin: 0;
+    width: 100%;
+    border: 1px solid red;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #FFFB91;
+    width: 100%;
+    height: 8vh;   
+    margin-bottom: 1vh;
+}
+
+h1{
+    color: #74FC8F;    
+    text-align: center;
+    align-self: center;
+}
+.main{    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 15px;
+}
+.item{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(246, 185, 255, 10);
+    align-self: center;
+    box-shadow: 5px 5px 5px;
+    width: 80vw;
+    height: 20vh;
+    border-radius: 5px;    
+}
+h3{
+    text-align: center;
+}
+.bloque1{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.datosUbicacion{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2vh;
+}
+#sitio{
+    width: 45vw;
+    margin-left: 2vw;
+    margin-bottom: 2vh;
+}
+
+#lat, #lon{
+    width: 60vw;
+}
+
