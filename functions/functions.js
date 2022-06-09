@@ -1,4 +1,4 @@
-import { app } from './modulos.js';
+import { app, db } from './modulos.js';
 
 
 
@@ -9,5 +9,3 @@ import { app } from './modulos.js';
 //     state: "CA",
 //     country: "USA"
 //   });
-
-  //db.collection('users').doc(item).set({'clave':3})
