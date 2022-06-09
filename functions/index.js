@@ -1,6 +1,7 @@
 import { docRef, getDocuments } from './modulos.js';
 
 let b = document.querySelector('#boton')
+let v = document.querySelector('#ver')
 
 window.addEventListener('DOMContentLoaded', ()=>{
   console.log(22)
@@ -17,28 +18,33 @@ b.addEventListener('click', ()=>{
   getDocuments();
   docRef();
 })
-/*import { getDocuments } from './modulos.js';
 
 
+var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
 
+function success(pos) {
+  var crd = pos.coords;
 
+  console.log('Your current position is:');
+  console.log('Latitude : ' + crd.latitude);
+  console.log('Longitude: ' + crd.longitude);
+  console.log('More or less ' + crd.accuracy + ' meters.');
 
-// Add a new document in collection "cities"
-// await setDoc(doc(app, "cities", "LA"), {
-//     name: "Los Angeles",
-//     state: "CA",
-//     country: "USA"
-//   });
+  let coor = document.getElementById('coor')
 
-function leerDatos(){
-  //getDocuments;
-}
+  coor.innerHTML = crd.latitude
+};
 
-let b = document.querySelector('#boton')
+function error(err) {
+  console.warn('ERROR(' + err.code + '): ' + err.message);
+};
 
-b.addEventListener('click', ()=>{
-
-  console.log(22)
+v.addEventListener('click', ()=>{
+  navigator.geolocation.getCurrentPosition(success, error, options);
 })
-*/
+
 
