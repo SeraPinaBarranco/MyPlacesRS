@@ -9,32 +9,33 @@
 </head>
 <body>
     <header>
-        <h1>My Places RS</h1>
+        <h1 style="text-align: center;margin-bottom: 2vh;">My Places RS</h1>
     </header>
     <main class="main">
         
-        <div class="item bloque1">
-            <h3>Datos Ubicacion</h3>
-            <section class="datosUbicacion">
+        <div class="item" id="bloque1">
+            <h2>Datos Ubicacion</h2>
+            <div class="datosUbicacion">
                 <label for="">
                     Sitio
-                    <input type="text" id="sitio">
                 </label>
+                <input type="text" id="sitio">
 
-                <span>Coordenadas
-                    <button id="ver">Cargar Ubicación</button>
-                </span>
+                <label>Coordenadas
+                </label>
+                <a href="#" class="btnCoords">Cargar Coords</a>
                 <label for="">
                     Latitud
-                    <input type="text" id="lat">
                 </label>
+                <input type="text" id="lat">
                 <label for="">
                     Longitud
-                    <input type="text" id="lon">
                 </label>
+                <input type="text" id="lon">
 
-            </section>
+            </div>
 
+            <a href="#" class="btnGuardar">Guardar Sitio</a>
         </div>
         <div class="item bloque2"></div>
         <div class="item bloque3"></div>

@@ -6,8 +6,69 @@
 *{
     margin: 0;
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
+body{
+    background-color: #f783ff70;
+}
+main{    
+    width: 100vw;  
+    text-align: center;  
+}
+.item{
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    background-color: #f6f15d;
+    border-radius: 5px;
+    box-shadow: 8px 8px 8px #0000009f;
+    padding: 1vh;
+}
+
+.datosUbicacion>input{
+    height: 30px;
+    width: 85vw;
+    font-size: x-large;
+}
+
+label{
+    display: block;
+    font-size: x-large;
+    margin-right: 2px;
+    margin-right: 2px;
+    margin-top: 2vh;
+    color: #000000;
+}
+
+.btnCoords, .btnGuardar {
+    width: 50vw;
+	box-shadow: 0px 0px 0px 0px #3e7327;
+	background-color:#77b55a;
+	border-radius:17px;
+	border:4px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:4px 8px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+}
+.btnCoords:hover, .btnGuardar:hover {
+	background-color:#72b352;
+    transform: scale(1.1,1.1);
+}
+.btnCoords:active, .btnGuardar:active {
+	position:relative;
+	top:1px;
+}
+.btnGuardar{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+/*
 header{
     display: flex;
     flex-direction: row;
