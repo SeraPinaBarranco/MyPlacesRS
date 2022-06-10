@@ -25,29 +25,16 @@ let db = getFirestore(app)
 
 
 //* Añadir un documento a la  coleccion
-export const docRef =async ()=>{
-  await addDoc(collection(db, "users"), {
-    first: "Ada",
-    last: "Lovelace",
-    born: 1815 }) 
+export const docRef =async (nombre, coordenadas, tags)=>{
+  await addDoc(collection(db, "sitios"), {
+    nombreSitio: nombre,
+    coordenadas: coordenadas,
+    tags: [] }) 
+    //console.log(n1)
 } 
-
-  /*
-const addDocument = async function addDocument(){
-  try {
-    const docRef = await addDoc(collection(db, "users"), {
-      first: "Ada",
-      last: "Lovelace",
-      born: 1815
-    });
-    console.log("Document written with ID: ", docRef.id);
-  } catch (e) {
-    console.error("Error adding document: ", e);
-  }
-} */
-
+ 
 export const getDocuments= async ()=>{
-  const querySnapshot = await getDocs(collection(db, "users"));
+  const querySnapshot = await getDocs(collection(db, "sitios"));
   querySnapshot.forEach((doc) => {
     console.log(`${doc.id} => ${doc.data()}`);
   });

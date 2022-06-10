@@ -2,16 +2,30 @@ import { docRef, getDocuments } from './modulos.js';
 
 let b = document.querySelector('#boton')
 let v = document.querySelector('#ver')
+let g = document.getElementById('guardar')
+
+let lat = document.getElementById('lat')
+
+let lon = document.getElementById('lon')
 
 window.addEventListener('DOMContentLoaded', ()=>{
   console.log(22)
 })
 
-b.addEventListener('click', ()=>{
+g.addEventListener('click', ()=>{
+  let sitio= document.getElementById('sitio')
+  
+  let coordenadas= [lat.value, lon.value]
+  //console.log(sitio.value,coordenadas)
+  docRef(sitio.value, coordenadas, "Casa");
+})
 
-  console.log(22)
-  getDocuments();
-  docRef();
+b.addEventListener('click', ()=>{
+  let sitio= document.getElementById('sitio')
+  
+  let coordenadas= [lat.value, lon.value]
+  //console.log(sitio.value,coordenadas)
+  docRef(sitio.value, coordenadas, "Casa");
 })
 
 
@@ -23,18 +37,22 @@ var options = {
 
 function success(pos) {
   var crd = pos.coords;
+  let latitude = crd.latitude
+  let longitude = crd.longitude
 
-  console.log('Your current position is:');
-  console.log('Latitude : ' + crd.latitude);
-  console.log('Longitude: ' + crd.longitude);
-  console.log('More or less ' + crd.accuracy + ' meters.');
-
-  let lat = document.getElementById('lat')
   lat.value = crd.latitude
-  let lon = document.getElementById('lon')
   lon.value = crd.longitude
 
-  coor.innerHTML = crd.latitude + ', ' + crd.longitude
+
+  console.log('Your current position is:');
+  console.log('Latitude : ' + latitude);
+  console.log('Longitude: ' + longitude);
+  console.log('More or less ' + crd.accuracy + ' meters.');
+  
+
+  coor.innerHTML = crd.latitude + ', ' + crd.longitude + " - " 
+  
+
 };
 
 function error(err) {
