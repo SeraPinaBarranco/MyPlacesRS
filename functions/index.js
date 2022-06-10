@@ -5,11 +5,6 @@ let v = document.querySelector('#ver')
 
 window.addEventListener('DOMContentLoaded', ()=>{
   console.log(22)
-
-
-
-  
-  
 })
 
 b.addEventListener('click', ()=>{
@@ -34,7 +29,10 @@ function success(pos) {
   console.log('Longitude: ' + crd.longitude);
   console.log('More or less ' + crd.accuracy + ' meters.');
 
-  let coor = document.getElementById('coor')
+  let lat = document.getElementById('lat')
+  lat.value = crd.latitude
+  let lon = document.getElementById('lon')
+  lon.value = crd.longitude
 
   coor.innerHTML = crd.latitude + ', ' + crd.longitude
 };
