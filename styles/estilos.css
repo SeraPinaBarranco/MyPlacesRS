@@ -2,71 +2,103 @@
     F683FF morado
     FFFB91 amarillo
     74FC8F verde
+
+    #C4B7B1 gris 
+    #CD9454 naranja
+    #BA9241 amarillo
 */
 *{
-    margin: 0;
-    width: 100%;
-    /* border: 1px solid red; */
+    margin: 0;    
+    box-sizing: border-box;
+    border: 1px solid red; 
 }
 body{
-    background-color: #f783ff70;
+    background-color: #C4B7B1;
 }
-main{    
-    width: 100vw;  
-    text-align: center;  
+header{    
+    display: grid;
+    background-color:#CD9454;
+    color: #fff;
+    margin-bottom: 2vh;
+    
+}
+
+header h1{
+    margin-top: 2vh;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2vh;
 }
 .item{
-    width: 90vw;
-    margin: 0 auto;
-    margin-bottom: 2vh;
-    background-color: #f6f15d;
-    border-radius: 5px;
-    box-shadow: 8px 8px 8px #0000009f;
-    padding: 1vh;
+    color: #fff;
+    font-size:x-large;
+    border-radius: 7px;
+    background-color: #BA9241;
+    margin: 0 2vw;
+    padding: 5px;
+
 }
 
-.datosUbicacion>input{
-    height: 30px;
-    width: 85vw;
-    font-size: x-large;
-}
+@media only screen and (max-width: 600px) {
+    
+    .main{
+        display: grid;
+        grid-template-areas: 
+            "a a"
+            "a a"
+            "a a"
+            "b b"
+            "c c";
+        /*
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;*/
+    }
+    #bloque1{
+        grid-area: a;
+    }
+    #bloque2{
+        grid-area: b;
+    }
+    #bloque3{
+        grid-area: c;
+    }
 
-label{
-    display: block;
-    font-size: x-large;
-    margin-right: 2px;
-    margin-right: 2px;
-    margin-top: 2vh;
-    color: #000000;
-}
+    .datosUbicacion{
+        display: grid;
+        grid-template-areas: 
+        "a1"
+        "b2"
+        "c3"
+        "d4"
+        "e5";        
+        gap: 5px;
+    }
+    .datosUbicacion>div{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+    }
 
-.btnCoords, .btnGuardar {
-    width: 50vw;
-	box-shadow: 0px 0px 0px 0px #3e7327;
-	background-color:#77b55a;
-	border-radius:17px;
-	border:4px solid #4b8f29;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:16px;
-	font-weight:bold;
-	padding:4px 8px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #5b8a3c;
-}
-.btnCoords:hover, .btnGuardar:hover {
-	background-color:#72b352;
-    transform: scale(1.1,1.1);
-}
-.btnCoords:active, .btnGuardar:active {
-	position:relative;
-	top:1px;
-}
-.btnGuardar{
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    .u1{
+        grid-area: a1;
+    }
+    .u2{
+        grid-area: b2;        
+    }
+    .u3{
+        grid-area: c3;       
+    }
+    .u4{
+        grid-area: d4;
+    }
+    .u5{
+        grid-area: e5;
+    }
 }
 /*
 header{
