@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/estilos.css">
+    <link rel="stylesheet" href="styles/tags.css">    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;margin-bottom: 2vh;"> <a href="./index.html">My Places RS</a></h1>
+    </header>
+    <section class="sTags">
+        <div class="h2Tags">
+            <h2>
+                Listado de tags
+            </h2>
+        </div>
+        <div class="tablaTags">
+            Tabla Tags
+        </div>
+    </section>
+    <section class="addTags">
+        <div class="h2Tags">
+            <h2>
+                Añade tags
+            </h2>
+        </div>
+        <div class="creaTag">
+            <input type="text" class="inpAdd" id="inpAdd" placeholder="Pon la etiqueta">
+            <a href="#" class="btnAdd" id="btnAdd">Añadir</a>
+        </div>
+    </section>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+      <!-- <script type="module" src="functions/modulos.js" defer></script> -->
+      <script type="module" src="functions/tags.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+.h2Tags{
+    text-align: center;
+}
+.creaTag{
+    display: grid;
+}
+
+.inpAdd{
+    margin: auto;
+    width: 50vw;
+    height: 5vh;
+    font-size:18px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btnAdd{
+    margin: auto;
+    color: #fff;
+    font-weight: bolder;
+    font-size:20px;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #41ba57;
+}
+.btnAdd:hover{
+    background-color: #286333;
+    transform: scale(0.9, 0.9);
+}

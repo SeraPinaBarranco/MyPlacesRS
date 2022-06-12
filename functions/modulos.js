@@ -39,3 +39,14 @@ export const getDocuments= async ()=>{
     console.log(`${doc.id} => ${doc.data()}`);
   });
 } 
+
+
+//*TODO añade etiqueta a la coleccion de tags
+export const addTag =async (tag)=>{
+  await addDoc(collection(db, "etiquetas"), {
+    tag: tag
+     }) 
+    //console.log(n1)
+} 
+
+export const saludo = ()=> console.log("HOLA")
