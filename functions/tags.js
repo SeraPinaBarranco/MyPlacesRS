@@ -22,9 +22,11 @@ onGetTags((querySnashot)=>{
       tablaTags.innerHTML += 
       `<div class="card">        
         <h3>${doc.data().tag}</h3>
-        <a href="#" class="" data-id="${doc.id}">Añadir a sitio</a>
-        <a href="#" class="eliminar" data-id="${doc.id}">Eliminar</a>
-        <a href="#" class="editar" data-id="${doc.id}">Editar</a>
+        <div class="botones">
+        <a href="#" class="" data-id="${doc.id}"><img data-id="${doc.id}" src="images/agregar.png" alt="agregar"></a>
+        <a href="#" class="eliminar" data-id="${doc.id}"><img data-id="${doc.id}" src="images/borrar.png" alt="borrar"></a>
+        <a href="#" class="editar" data-id="${doc.id}"><img data-id="${doc.id}" src="images/editar.png" alt="editar"></a>
+        </div>
       </div>      
       `
     });
