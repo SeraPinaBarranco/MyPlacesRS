@@ -1,6 +1,42 @@
-.h2Tags{
-    text-align: center;
+.parent {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 8vh repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 10px;
 }
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 4;
+}
+.div2 {
+  grid-area: 2 / 1 / 3 / 4;
+  text-align: center;
+
+}
+.div3 {
+  grid-area: 3 / 1 / 4 / 4;
+  text-align: center;
+}
+.div4 {
+  grid-area: 4 / 1 / 5 / 4;
+}
+
+.h2Tags {    
+  text-align: center;
+}
+
+.card{
+    display: inline-block;
+    width:40vw;
+    padding: 8px;
+    margin: 5px;
+    background-color: bisque;
+    border-radius: 8px;
+}
+/*
+
 .creaTag{
     display: grid;
 }
@@ -28,3 +64,4 @@
     background-color: #286333;
     transform: scale(0.9, 0.9);
 }
+*/

@@ -11,10 +11,16 @@ window.addEventListener('DOMContentLoaded', ()=>{
 //addTag("Comer Bien")
 onGetTags((querySnashot)=>{
     tablaTags.innerHTML = "";
+    tablaTags.innerHTML +=`
+    <h2>
+        Listado de tags
+    </h2>
+    
+    `
     querySnashot.forEach(doc => {
       console.log(doc.data().tag + " - " + doc.id)
       tablaTags.innerHTML += 
-      `<div class="card">
+      `<div class="card">        
         <h3>${doc.data().tag}</h3>
         <a href="#" class="" data-id="${doc.id}">Añadir a sitio</a>
         <a href="#" class="eliminar" data-id="${doc.id}">Eliminar</a>
