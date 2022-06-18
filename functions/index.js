@@ -1,8 +1,11 @@
-import { docRef, getDocuments } from './modulos.js';
+import { docRef, getDocuments, onGetTags } from './modulos.js';
 
 let b = document.querySelector('#boton')
 let v = document.querySelector('#ver')
 let g = document.getElementById('guardar')
+
+let listTags = document.querySelector('#listTags')
+let seeTag = document.getElementById('seeTags')
 
 let lat = document.getElementById('lat')
 
@@ -21,12 +24,37 @@ g.addEventListener('click', ()=>{
 })
 
 b.addEventListener('click', ()=>{
-  let sitio= document.getElementById('sitio')
+  /*let sitio= document.getElementById('sitio')
   
   let coordenadas= [lat.value, lon.value]
   //console.log(sitio.value,coordenadas)
-  docRef(sitio.value, coordenadas, "Casa");
+  docRef(sitio.value, coordenadas, "Casa");*/
+
+  /*
+  //loop throug the checkboxes and get the checked ones
+  let chk = document.getElementsByName('tag')
+
+  chk.forEach(element => {
+    if(element.checked){
+      console.log(element.value)
+    }
+  })
+*/
 })
+
+seeTag.addEventListener('click', getAllTags)
+
+async function getAllTags(){
+  onGetTags((querySnashot)=>{
+    let list = ""
+    querySnashot.forEach(doc => {
+      console.log(doc.data().tag + " - " + doc.id)
+      list += `<input type="checkbox" name="tag" value="${doc.data().tag}">${doc.data().tag}</input><br>`
+    });
+    listTags.innerHTML = list
+  })
+
+}
 
 
 var options = {
