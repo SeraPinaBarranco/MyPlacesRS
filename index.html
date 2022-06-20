@@ -5,57 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="styles/estilos.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1 style="text-align: center;margin-bottom: 2vh;">My Places RS</h1>
+    <header class="container">
+        <h1  class="title is-3 is-white" style="text-align: center;margin-bottom: 2vh;" >My Places RS</h1>
     </header>
+    <h2 class="title is-4 is-white" style="text-align: center;">Datos Ubicacion</h2>
     <section class="main">
-        
-        <div class="item" id="bloque1">
-            <h2>Datos Ubicacion</h2>
-            <div class="datosUbicacion">
-                <div class="u1">
-                    <label for="">
-                        Sitio
-                    </label>
-                    <input type="text" id="sitio">
-                    <div class="etiquetas">
-                        <!-- <input type="checkbox" name="tag" id="" value="bueno"><label for="">Buenos</label>
-                        <input type="checkbox" name="tag" id="" value="bonito"><label for="">Buenos</label> -->
-                        <a href="tags.html" id="addTag">Añadir etiquetas</a> 
-                        <a href="#" id="seeTags">Ver etiquetas</a> 
-                        <div id="listTags">
 
-                        </div>
-                    </div>
-                </div>
-                <div class="u2">                 
-                    <a href="#" class="btnCoords" id="ver">Cargar Coords</a>
-                </div>
-                <div class="u3">
-                    <label for="">
-                        Latitud
-                    </label>
-                    <input type="text" id="lat">
-                </div>
-                <div class="u4">
-                    <label for="">
-                        Longitud
-                    </label>
-                    <input type="text" id="lon">
-                </div>
+        <div class="datosUbicacion">
+            <label for="">
+                Sitio
+                <input type="text" id="sitio">
+            </label>
+        </div>
+
+        <div class="etiquetas">
+            <div class="btn-etiquetas">
+                <a class="button is-link has-background-info" href="tags.html" id="addTag">Añadir etiquetas</a> 
+                <a class="button is-link has-background-info" href="#" id="seeTags">Ver etiquetas</a> 
+            </div>  
+            <div id="listTags">
+
             </div>
+        </div>
+
+    <section class="container">
+        <h2><a href="#" class="btnCoords" id="ver">Cargar Coords</a></h2>
+        <section class="coor">
+            <div class="u3">
+                <label for="">
+                    Latitud
+                    <input class="input is-rounded" type="text" id="lat">
+                </label>
+            </div>
+            <div class="u4">
+                <label for="">
+                    Longitud
+                    <input class="input is-rounded" type="text" id="lon">
+                </label>
+            </div>
+        </section>
+    </section>
+        
+        
             <div class="u5">
                 <a href="#" class="btnGuardar" id="guardar">Guardar Sitio</a>
             </div>
 
-        </div>
+       
         <div class="item" id="bloque2"></div>
         <div class="item" id="bloque3"></div>
-    </main>
+  
     
     <button id="boton">Leer</button>
     

@@ -4,8 +4,11 @@ let b = document.querySelector('#boton')
 let v = document.querySelector('#ver')
 let g = document.getElementById('guardar')
 
+let sitio = document.getElementById('sitio')
+
 let listTags = document.querySelector('#listTags')
 let seeTag = document.getElementById('seeTags')
+let tags = document.getElementsByName('tag')
 
 let lat = document.getElementById('lat')
 
@@ -16,11 +19,18 @@ window.addEventListener('DOMContentLoaded', ()=>{
 })
 
 g.addEventListener('click', ()=>{
-  let sitio= document.getElementById('sitio')
+  //visualizar los checkbox si están checkeados
+  let arrayTags = []
+  tags.forEach(t => {
+    if(t.checked){
+      arrayTags.push(t.value)
+    }    
+  })
   
-  let coordenadas= [lat.value, lon.value]
-  //console.log(sitio.value,coordenadas)
-  docRef(sitio.value, coordenadas, "Casa");
+  //guarda el sitio
+  let sitio= document.getElementById('sitio')  
+  let coordenadas= [lat.value, lon.value]  
+  docRef(sitio.value, coordenadas, arrayTags);
 })
 
 b.addEventListener('click', ()=>{
@@ -44,15 +54,29 @@ b.addEventListener('click', ()=>{
 
 seeTag.addEventListener('click', getAllTags)
 
+let mostrar = false
 async function getAllTags(){
-  onGetTags((querySnashot)=>{
-    let list = ""
-    querySnashot.forEach(doc => {
-      console.log(doc.data().tag + " - " + doc.id)
-      list += `<input type="checkbox" name="tag" value="${doc.data().tag}">${doc.data().tag}</input><br>`
-    });
-    listTags.innerHTML = list
-  })
+  if(!mostrar){
+    onGetTags((querySnashot)=>{
+      let list = ""
+      querySnashot.forEach(doc => {
+        console.log(doc.data().tag + " - " + doc.id)
+        list += `<label>
+                    ${doc.data().tag}
+                    <span>
+                      <input type="checkbox" name="tag" value="${doc.data().tag}">
+                    </span>
+                 </label>`
+      });      
+      listTags.innerHTML = list
+    })
+    seeTag.innerHTML = "Ocultar Etiquetas"
+    mostrar = true
+  }else{
+    listTags.innerHTML = ""
+    seeTag.innerHTML = "Ver Etiquetas"
+    mostrar = false
+  }
 
 }
 

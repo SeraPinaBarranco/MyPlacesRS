@@ -29,7 +29,7 @@ export const docRef =async (nombre, coordenadas, tags)=>{
   await addDoc(collection(db, "sitios"), {
     nombreSitio: nombre,
     coordenadas: coordenadas,
-    tags: [] }) 
+    tags: tags }) 
     //console.log(n1)
 } 
  

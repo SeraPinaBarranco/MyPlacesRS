@@ -1,3 +1,4 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 /*
     F683FF morado
     FFFB91 amarillo
@@ -15,6 +16,62 @@
 body{
     background-color: #C4B7B1;
 }
+
+header{
+    
+    background-color:#CD9454;
+    color: #ffffff;    
+    font-weight: bolder;
+}
+header>h1{
+    
+    vertical-align: middle;
+    padding: 1vh;
+}
+
+.title, .container>h2{
+    color: #ffffff;
+}
+.datosUbicacion, .etiquetas{
+    text-align: center;
+}
+
+.btn-etiquetas{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+#listTags{
+    margin-bottom: 2vh;
+}
+
+.container{
+    text-align: center;
+}
+
+.coor{
+    display: flex;    
+    justify-content: space-between;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+h2>a{
+    text-decoration: none;
+    font-size: x-large;
+    color: #ffffff;
+}
+
+h2>a:active{
+    color: #ffffff;
+}
+
+
+/*
 header{    
     display: grid;
     background-color:#CD9454;
@@ -45,6 +102,26 @@ header>h1>a{
 
 }
 
+#listTags{
+    margin-top: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+#listTags>label{
+    text-align: center;
+    font-size: 16px;
+    width: 30%;
+}
+#listTags>input{
+    margin-right: 3px;
+}
+#listTags>span{
+    text-align: center;
+}
 @media only screen and (max-width: 600px) {
     
     .main{
@@ -55,9 +132,9 @@ header>h1>a{
             "a a"
             "b b"
             "c c";
-        /*
+       
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;*/
+        grid-template-rows: 1fr 1fr 1fr 1fr;
     }
     #bloque1{
         grid-area: a;
@@ -102,7 +179,39 @@ header>h1>a{
     .u5{
         grid-area: e5;
     }
+
+    .etiquetas{
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-around;   
+        column-gap: 5px; 
+        margin: 2vh 0;  
+    }
+
+    .etiquetas>a{
+        background-color: #FFFB91;
+        padding: 5px 8px;
+        text-align: center;
+        width: 45vw;
+        border-radius: 5px;
+        text-decoration: none;
+    }
 }
+@media (max-width: 750px){
+    #listTags>label{
+        width: 35%;
+        text-align: left;
+        font-size: 16px;
+    }
+}
+@media (max-width: 400px){
+    #listTags>label{
+        width: 40%;
+        text-align: left;
+        font-size: 16px;
+    }
+}
+    
 /*
 header{
     display: flex;
@@ -160,3 +269,4 @@ h3{
     width: 60vw;
 }
 
+*/
