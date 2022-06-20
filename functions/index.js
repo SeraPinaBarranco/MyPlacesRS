@@ -61,7 +61,7 @@ async function getAllTags(){
       let list = ""
       querySnashot.forEach(doc => {
         console.log(doc.data().tag + " - " + doc.id)
-        list += `<label>
+        list += `<label class="tag is-primary">
                     ${doc.data().tag}
                     <span>
                       <input type="checkbox" name="tag" value="${doc.data().tag}">

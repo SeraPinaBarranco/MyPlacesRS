@@ -10,23 +10,21 @@
 */
 *{
     margin: 0;    
-    box-sizing: border-box;
+    box-sizing: border-box;    
     /* border: 1px solid red;  */
 }
 body{
     background-color: #C4B7B1;
 }
 
-header{
-    
+header{    
     background-color:#CD9454;
     color: #ffffff;    
     font-weight: bolder;
 }
-header>h1{
-    
+header>h1{    
     vertical-align: middle;
-    padding: 1vh;
+    padding: 1vh 0px;
 }
 
 .title, .container>h2{
@@ -36,18 +34,35 @@ header>h1{
     text-align: center;
 }
 
+
+
 .btn-etiquetas{
-    display: flex;
+    width: 80vw;
+    display: inline-block;
+    align-self: center;
     justify-content: space-around;
     margin-top: 2vh;
     margin-bottom: 2vh;
 }
 
 #listTags{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 15px;
     margin-bottom: 2vh;
 }
 
-.container{
+#listTags>label{
+    display: inline-block;
+    width: 15em;
+    text-align: center;
+    font-size: large;
+}
+
+
+.container{    
     text-align: center;
 }
 
@@ -70,7 +85,39 @@ h2>a:active{
     color: #ffffff;
 }
 
+#addTag, #seeTags{
+    width: 30vw;
+}
 
+#sitio{
+    width: 20vw;
+}
+.u3{
+    margin-right: 0.5vw;
+}
+.u4{
+    margin-left: 0.5vw;
+}
+
+@media (min-width: 720px) {
+    .coor{
+        margin: auto;
+        width: 60vw;
+    }
+}
+
+@media (max-width: 560px){
+    #addTag{        
+        margin-bottom: 1vh;
+    }   
+    #addTag, #seeTags{
+        width: 40vw;
+    }
+
+    #sitio{
+        width: 40vw;
+    }
+}
 /*
 header{    
     display: grid;
