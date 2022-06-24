@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="styles/estilos.css">
+    <script type="text/javascript" src="sweet/sweetalert.js" defer></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <header class="container">
+        <h1  class="title is-3 is-white" style="text-align: center;margin-bottom: 2vh;" ><a href="index.html">My Places RS</a></h1>
+    </header>
+    
+    
+    <div class="datosUbicacion">
+            <h2 class="title is-4 is-white" style="text-align: center;">Datos Ubicacion</h2>
+            <label for="">
+                Sitio
+                <input class="input is-rounded" type="text" id="sitio">
+            </label>
+        </div>
+
+        <div class="etiquetas">
+            <div class="btn-etiquetas">
+                <a class="button is-link has-background-info" href="tags.html" id="addTag">Añadir etiquetas</a> 
+                <a class="button is-link has-background-info" href="#" id="seeTags">Ver etiquetas</a> 
+            </div>  
+            <div id="listTags">
+
+            </div>
+        </div>
+
+    <section class="container">
+        <h2><a href="#" class="btnCoords" id="ver">Cargar Coords</a></h2>
+        <section class="coor">
+            <div class="u3">
+                <label for="">
+                    Latitud
+                    <input class="input is-rounded" type="text" id="lat">
+                </label>
+            </div>
+            <div class="u4">
+                <label for="">
+                    Longitud
+                    <input class="input is-rounded" type="text" id="lon">
+                </label>
+            </div>
+        </section>
+    </section>
+        
+        
+            <div class="u5">
+                <a href="#" class="btnGuardar" id="guardar">Guardar Sitio</a>
+            </div>
+
+       
+        <div class="item" id="bloque2"></div>
+        <div class="item" id="bloque3"></div>
+  
+    
+    <button id="boton">Leer</button>
+    
+    <span id="coor">
+
+    </span>
+  
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+      <!-- <script type="module" src="functions/modulos.js" defer></script> -->
+      <script type="module" src="functions/index.js"></script>
+      
+      
+</body>
+</html>

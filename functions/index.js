@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
 })
 
 g.addEventListener('click', ()=>{
-  //visualizar los checkbox si están checkeados
+  //* visualizar los checkbox si están checkeados
   let arrayTags = []
   tags.forEach(t => {
     if(t.checked){
@@ -27,10 +27,24 @@ g.addEventListener('click', ()=>{
     }    
   })
   
-  //guarda el sitio
+  //* guarda el sitio
   let sitio= document.getElementById('sitio')  
   let coordenadas= [lat.value, lon.value]  
   docRef(sitio.value, coordenadas, arrayTags);
+
+  setTimeout(() => {
+    window.location.href = "index.html"
+  }, 2000);
+  Swal.fire({
+    title: 'Sitio Guardado!',
+    text: 'Guardado con éxito',
+    icon: 'success',
+    confirmButtonText: 'Aceptar'
+  })
+
+  sitio.value = ""
+  lat.value = ""
+  lon.value = ""
 })
 
 b.addEventListener('click', ()=>{

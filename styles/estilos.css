@@ -122,6 +122,10 @@ h2>a:active{
 #addTag, #seeTags{
     width: 15vw;
 }
+.title>a{
+    color: #fff;
+    text-decoration: none;
+}
 @media (max-width: 780px) {
     #addTag, #seeTags{
         width: 20vw;

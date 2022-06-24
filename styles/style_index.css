@@ -1,0 +1,33 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+/*
+    F683FF morado
+    FFFB91 amarillo
+    74FC8F verde
+
+    #C4B7B1 gris 
+    #CD9454 naranja
+    #BA9241 amarillo
+*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container{
+    background-color:#CD9454;
+    width: 70vw;
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 10vh;
+    padding: 1vh 0vh;   
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px; 
+}
+
+.title{
+    color: #fff;
+}
+
+.button{
+    margin: 1vh;
+}
