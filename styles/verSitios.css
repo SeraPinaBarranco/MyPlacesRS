@@ -1,8 +1,42 @@
+body{    
+}
 .header{
-    margin: 1vh 3vw;
+    margin: 0 auto;
+    /* margin: 1vh 3vw; */
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     padding: 1vh 0;
     border-radius: 5px 5px 5px;
     box-shadow: 5px 5px 5px;
     background-color: #CD9454;
     text-align: center;
 }
+
+.header div{
+    margin-bottom: 2vh;
+    font-size: large;
+}
+
+.buttonClass {
+    font-size:15px;
+    font-family:Arial;
+    width:140px;
+    height:50px;
+    border-width:1px;
+    color:#ffffff;
+    border-color:#124d77;
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
+    border-bottom-left-radius:3px;
+    border-bottom-right-radius:3px;
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    text-shadow:inset 0px 1px 0px #154682;
+    background:linear-gradient(#007dc1, #0061a7);
+    padding: 7px;
+  }
+  
+  .buttonClass:hover {
+    background: linear-gradient(#0061a7, #007dc1);
+  }
+    
+  
